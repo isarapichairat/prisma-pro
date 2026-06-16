@@ -127,3 +127,49 @@ Content-Type: application/json
 
 ### sequential
 GET http://localhost:3000/sequential
+
+
+### CREATE NEW APPLICATION
+POST http://localhost:3000/applications
+Content-Type: application/json
+
+{
+"email": "jane1@gmail.com",
+"name": "Jone Doe",
+"address": {
+"create": {
+"city": "New York",
+"country": "USA",
+"zip": "34443"
+}
+},
+"applications": {
+"create": [
+{
+"amount": 32224,
+"tenure": "5 Years",
+"type": "BUSINESS_FINANCING"
+}
+]
+}
+}
+
+
+### Create Account
+POST http://localhost:3000/accounts
+Content-Type: application/json
+
+{
+"title" : "Sam",
+"balance" : 100
+}
+
+### Trasnfer Amount
+POST http://localhost:3000/accounts/transfer
+Content-Type: application/json
+
+{
+"sender" :1,
+"receiver" :2,
+"amount": 20
+}
